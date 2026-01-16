@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redireciona chamadas de API para o backend Railway
+# IMPORTANTE: Atualize a URL abaixo após criar o serviço no Railway
+[[redirects]]
+  from = "/api/*"
+  to = "https://ast-sos-backend-production.up.railway.app/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback - todas as outras rotas vão para index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

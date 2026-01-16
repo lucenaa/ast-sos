@@ -1,0 +1,64 @@
+.typing-indicator {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 8px 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.typing-avatar {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.typing-bubble {
+  background: var(--assistant-bubble);
+  border: 1px solid var(--border-color);
+  border-radius: 18px 18px 18px 4px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

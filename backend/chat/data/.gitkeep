@@ -1,0 +1,3 @@
+# Esta pasta contém os dados do RAG:
+# - documents_rows.csv: arquivo CSV com transcrições
+# - embeddings.npy: matriz de embeddings pré-computada (gerada pelo script precompute.py)

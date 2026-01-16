@@ -1,0 +1,17 @@
+# ============================================
+# Dependências do projeto SOS Educação Chat
+# ============================================
+# 
+# Este projeto possui dependências separadas:
+#
+# BACKEND (Django + Django Ninja):
+#   cd backend && pip install -r requirements.txt
+#
+# FRONTEND (React + Vite):
+#   cd frontend && npm install
+#
+# ============================================
+# Para instalar todas as dependências do backend a partir da raiz:
+# pip install -r backend/requirements.txt
+
+-r backend/requirements.txt

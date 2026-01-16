@@ -1,0 +1,130 @@
+/* ============================================
+   SOS Educação Chat - Design System
+   Inspirado em WhatsApp Web / ChatGPT
+   ============================================ */
+
+/* Google Fonts - JetBrains Mono para código */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* CSS Variables - Tema escuro elegante */
+:root {
+  /* Cores de fundo */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --chat-bg: #0f0f23;
+  --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Cores de texto */
+  --text-primary: #eaeaea;
+  --text-muted: #8b8b9a;
+
+  /* Cores de acento */
+  --accent-color: #667eea;
+  --accent-hover: #5a6fd6;
+
+  /* Bolhas de mensagem */
+  --user-bubble: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --user-bubble-text: #ffffff;
+  --assistant-bubble: #1e1e3f;
+
+  /* Bordas */
+  --border-color: #2d2d4a;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset e base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botões base */
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Scrollbar global */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Animações globais */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
